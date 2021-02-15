@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use App\Models\Like;
+use App\Models\User;
 use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
@@ -17,6 +18,7 @@ class Post extends Model
     {
         return $this->likes->contains('user_id', $user->id);
     }
+
 
     public function user()
     {
